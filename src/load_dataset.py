@@ -13,7 +13,7 @@ def load_data(base_dir):
     target_dir.mkdir(parents=True, exist_ok=True)
     base_url = "http://vision.stanford.edu/aditya86/ImageNetDogs/{}"
     
-    for f in ["images.tar", "annotation.tar", "lists.tar"]:
+    for f in ["images.tar", "annotation.tar"]:
         p = target_dir / f
         if not p.exists():
             print(f"\nDownloading {f}...")

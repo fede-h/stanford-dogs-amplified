@@ -14,7 +14,7 @@ def main():
         # folder name format: n02085620-Chihuahua
         prefix, breed = folder.name.split("-", maxsplit=1)
         file_count = sum(1 for f in folder.iterdir() if f.is_file())
-        rows.append((breed.lower(), prefix, file_count))
+        rows.append((breed, prefix, file_count))
 
     with open(output_path, "w", newline="") as f:
         writer = csv.writer(f)

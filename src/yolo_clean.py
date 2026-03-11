@@ -100,7 +100,7 @@ def process_images():
                 for box in result.boxes.xyxy:  # Extract absolute coordinates
                     xmin, ymin, xmax, ymax = box.tolist()
                     detected_objects.append({
-                        'name': breed.capitalize(),
+                        'name': breed,
                         'xmin': xmin,
                         'ymin': ymin,
                         'xmax': xmax,

@@ -259,7 +259,7 @@ def main():
                     prefix = row[1].strip()
                     
                     # folder matching Stanford Dogs Annotation style
-                    folder_name = f"{prefix}-{breed.capitalize()}"
+                    folder_name = f"{prefix}-{breed}"
                     output_sub_dir = os.path.join(output_dir_origin, folder_name)
                     
                     if not os.path.exists(output_sub_dir):
