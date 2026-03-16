@@ -52,7 +52,10 @@ def process_images():
     
     # Load YOLO Model
     print("Loading YOLO model...")
-    model = YOLO('yolo26m.pt')
+    model_dir = base_dir / "models"
+    model_dir.mkdir(parents=True, exist_ok=True)
+    model_path = model_dir / "yolo26m.pt"
+    model = YOLO(str(model_path))
     
     if not input_dir.exists():
         print(f"Error: Directory {input_dir} not found. Run bbid.py first.")
